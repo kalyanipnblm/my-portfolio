@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
+    background-color: #000;
+  }
+  
+  .home-page, .second-page, .third-page {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .sunset {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .pixel-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff6f61, #ff8c42, #ffaf4d);
+    image-rendering: pixelated;
+    z-index: 1;
+  }
+  
+  .sun {
+    position: absolute;
+    bottom: -50px;
+    right: 20%;
+    width: 80px;
+    height: 80px;
+    background-color: #ff8c42;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #ff8c42, 0 0 80px #ff8c42;
+    z-index: 2;
+    animation: sunset 8s infinite ease-in-out;
+  }
+  
+  @keyframes sunset {
+    0% {
+      bottom: -50px;
+      background-color: #ff8c42;
+    }
+    50% {
+      bottom: 50%;
+      background-color: #ff6f61;
+    }
+    100% {
+      bottom: 100%;
+      background-color: #ffaf4d;
+    }
+  }
+  
+  .hi-there {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(0%, 0%);
+    font-family: 'Micro 5', sans-serif;
+    font-size: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .im-kalyani {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-family: "Roboto", sans-serif;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 4;
+  }
+  
+  .social-link {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #ff8c42;
+  }
+  
+  /* Second Page Styles */
+  .second-page .sun {
+    display: none;
+  }
+  
+  .page-title {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+  
+  .about-me-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; 
+    font-family: "Cutive Mono", monospace;
+    font-size: 24px; 
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify; 
+    line-height: 1.6; 
+    z-index: 3;
+  }
+  
+  /* Third Page Styles */
+  .third-page .sun {
+    display: none;
+  }
+  
+  .my-projects-title {
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    text-align: justify;
+  }
+
+  .projects-container {
+    position: absolute;
+    top: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; 
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+    z-index: 3;
+  }
+  
+  .project {
+    text-align: center; 
+  }
+  
+  .project-image {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    object-fit: contain; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; 
+    background: transparent; 
+  }
+  
+  .project-image:hover {
+    width: 650px;
+    height: 650px; 
+    z-index: 5; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .project-description {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px; 
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px; 
+  }
+
+  .main-description {
+    font-family: "Roboto Mono", monospace;
+    font-size: 23px; 
+    color: rgba(255, 255, 255, 0.7); 
+    text-align: justify; 
+    margin-top: 500px; 
+    width: 80%; 
+    max-width: 800px; 
+    line-height: 1.6; 
+    position: relative; 
+    z-index: 1; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fourth-page .sun {
+    display: none;
+  }
+
+  .my-projects-title-2 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    text-align: justify;
+  }
+
+  .projects-container-2 {
+    position: absolute;
+    top: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px; 
+    z-index: 3;
+  }
+
+  .project-2 {
+    text-align: center; 
+  }
+
+  .project-image-2 {
+    width: 200px;
+    height: 200px; 
+    border-radius: 10px; 
+    object-fit: contain; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.5s ease-in-out; 
+    cursor: pointer;
+    background: transparent; 
+  }
+
+  .project-image-2:hover {
+    width: 650px; 
+    height: 650px; 
+    z-index: 5; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-description-2 {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px; 
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px; 
+  }
+
+  .main-description-2 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 23px; 
+    color: rgba(255, 255, 255, 0.7); 
+    text-align: justify; 
+    margin-top: 500px; 
+    width: 80%; 
+    max-width: 800px; 
+    line-height: 1.6; 
+    position: relative; 
+    z-index: 1; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fifth Page Styles */
+  .fifth-page .sun {
+    display: none;
+  }
+
+  .skills-title {
+    position: absolute;
+    top: 0.5%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    text-align: center;
+  }
+
+  .skills-container {
+    position: absolute;
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; 
+    max-width: 1200px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    z-index: 3;
+  }
+
+  .skill-category {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; 
+    padding: 20px;
+    transition: all 0.3s ease-in-out; 
+  }
+
+  .skill-category:hover {
+    background: rgba(255, 255, 255, 0.2); 
+    transform: translateY(-5px); 
+  }
+
+  .category-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px; 
+    color: #ff8c42;
+    margin-bottom: 15px; 
+    text-align: center;
+  }
+
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+  }
+
+  .skill {
+    text-align: center; 
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px; 
+    transition: all 0.3s ease-in-out; 
+  }
+
+  .skill:hover {
+    background: rgba(255, 255, 255, 0.1); 
+    transform: translateY(-5px); 
+  }
+
+  .skill-icon {
+    font-size: 30px; 
+    color: #ff8c42; 
+    margin-bottom: 10px; 
+  }
+
+  .skill-name {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px; 
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0; 
+  }
+
+
+
+
+
+
+
+   
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
